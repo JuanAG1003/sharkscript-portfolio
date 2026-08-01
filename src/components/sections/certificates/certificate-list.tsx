@@ -72,7 +72,7 @@ export default function CertificateList () {
 
       <div
         aria-label='Carrusel de certificados'
-        className='snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] sm:snap-none [&::-webkit-scrollbar]:hidden'
+        className='-mt-2 snap-x snap-mandatory overflow-x-auto pt-2 scroll-smooth [scrollbar-width:none] sm:snap-none [&::-webkit-scrollbar]:hidden'
         ref={carouselRef}
         role='region'
       >
