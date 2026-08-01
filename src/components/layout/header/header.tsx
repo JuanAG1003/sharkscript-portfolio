@@ -47,7 +47,7 @@ export default function Header () {
             'hover:border-primary/45 hover:bg-primary hover:text-primary-contrast hover:shadow-primary-glow'
           )}
           download
-          href='/cv.pdf'
+          href='/juan-ariel-alarcon-garcia-desarrollador-web-jr.pdf'
           variant='secondary'
         >
           Descargar CV
