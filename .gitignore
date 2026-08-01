@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+desing-reference/
 
 # debug
 npm-debug.log*
