@@ -62,7 +62,7 @@ export const projects: Project[] = [
     description:
       'Aplicación frontend creada para generar contexto técnico de proyectos de código mediante lectura local de archivos, árbol visual, filtros, preview de contenido y exportación Markdown.',
     role: 'Frontend Developer',
-    status: 'in-progress',
+    status: 'completed',
     category: 'tooling',
     origin: 'personal',
     technologies: [
