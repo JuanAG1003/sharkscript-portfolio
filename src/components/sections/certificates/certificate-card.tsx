@@ -4,6 +4,16 @@ import Card from '@/components/ui/card'
 import { cn } from '@/lib/cn'
 import type { Certificate } from '@/types/certificate'
 
+const credentialTypeLabels: Record<Certificate['credentialType'], string> = {
+  certificate: 'Certificado',
+  diploma: 'Diploma'
+}
+
+const viewCredentialLabels: Record<Certificate['credentialType'], string> = {
+  certificate: 'Ver certificado',
+  diploma: 'Ver diploma'
+}
+
 type CertificateCardProps = {
   certificate: Certificate
 }
@@ -13,11 +23,9 @@ export default function CertificateCard ({
 }: CertificateCardProps) {
   const validationHref = certificate.validationUrl ?? certificate.image.src
   const validationLabel = certificate.validationUrl === undefined
-    ? 'Ver diploma'
+    ? viewCredentialLabels[certificate.credentialType]
     : 'Validar'
-  const credentialType = certificate.validationUrl === undefined
-    ? 'Diploma'
-    : 'Certificado'
+  const credentialTypeLabel = credentialTypeLabels[certificate.credentialType]
 
   return (
     <Card
@@ -36,7 +44,7 @@ export default function CertificateCard ({
           className='absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(47_217_244/0.18),transparent_58%)] opacity-80'
         />
         <span className='absolute left-3 top-3 z-10 rounded-full border border-primary/25 bg-background/70 px-2.5 py-1 font-mono text-[0.58rem] font-medium uppercase tracking-[0.16em] text-primary backdrop-blur-md sm:left-4 sm:top-4 sm:text-[0.62rem]'>
-          {credentialType}
+          {credentialTypeLabel}
         </span>
 
         <Image

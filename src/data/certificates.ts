@@ -10,6 +10,7 @@ export const certificates: Certificate[] = [
     issuer: 'Generation México / AMITI',
     issuedAt: '2026',
     category: 'Full Stack',
+    credentialType: 'diploma',
     image: certificateImages.generationJavaFullStack
   },
   {
@@ -20,6 +21,7 @@ export const certificates: Certificate[] = [
     issuer: 'Vercel',
     issuedAt: '2026',
     category: 'Next.js',
+    credentialType: 'certificate',
     image: certificateImages.vercelReactFoundationsNextjs,
     validationUrl: 'https://nextjs.org/learn/certificate?course=react-foundations&user=165836&certId=react-foundations-165836-1782758457459'
   },
@@ -31,6 +33,7 @@ export const certificates: Certificate[] = [
     issuer: 'Vercel',
     issuedAt: '2026',
     category: 'Next.js',
+    credentialType: 'certificate',
     image: certificateImages.vercelNextjsAppRouterFundamentals,
     validationUrl: 'https://nextjs.org/learn/certificate?course=dashboard-app&user=165836&certId=dashboard-app-165836-1783622192111'
   },
@@ -42,6 +45,7 @@ export const certificates: Certificate[] = [
     issuer: 'BIG school',
     issuedAt: '2026',
     category: 'AI',
+    credentialType: 'certificate',
     image: certificateImages.bigSchoolDesarrolloIaProduccion
   }
 ]

@@ -7,6 +7,7 @@ export type Certificate = {
   issuer: string
   issuedAt: string
   category: string
+  credentialType: 'certificate' | 'diploma'
   image: StaticImageData
   validationUrl?: string
 }
