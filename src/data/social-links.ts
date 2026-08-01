@@ -46,13 +46,13 @@ export const footerSocialLinks: FooterSocialLink[] = [
   {
     id: 'juan-instagram',
     label: '@JuanAG1003',
-    href: 'https://www.instagram.com/JuanAG1003',
+    href: 'https://www.instagram.com/jagar_1003?igsh=MXV5dHJ0dzNvM2Nqbw==',
     ariaLabel: 'Instagram de JuanAG1003'
   },
   {
     id: 'sharkscript-instagram',
     label: '@SharkScript1003',
-    href: 'https://www.instagram.com/SharkScript1003',
+    href: 'https://www.instagram.com/sharkscript_1003?igsh=MWd2dWp6dzdpc2FwMQ==',
     ariaLabel: 'Instagram de SharkScript1003'
   }
 ]
