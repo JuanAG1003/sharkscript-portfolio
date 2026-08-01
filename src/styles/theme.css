@@ -1,0 +1,49 @@
+:root {
+  --app-background: #090f11;
+  --app-foreground: #dde4e5;
+  --app-muted: #bbc9cd;
+
+  --app-surface: #0e1416;
+  --app-surface-muted: #161d1e;
+  --app-surface-elevated: #1a2122;
+
+  --app-border: #243235;
+  --app-border-strong: #3c494c;
+
+  --app-primary: #2fd9f4;
+  --app-primary-hover: #8aebff;
+  --app-primary-strong: #22d3ee;
+  --app-primary-contrast: #00363e;
+
+  --app-ring: #2fd9f4;
+
+  --app-glow-primary: 0 0 22px rgb(47 217 244 / 0.14);
+  --app-glow-primary-strong: 0 0 34px rgb(47 217 244 / 0.24);
+}
+
+@theme inline {
+  --color-background: var(--app-background);
+  --color-foreground: var(--app-foreground);
+  --color-muted: var(--app-muted);
+
+  --color-surface: var(--app-surface);
+  --color-surface-muted: var(--app-surface-muted);
+  --color-surface-elevated: var(--app-surface-elevated);
+
+  --color-border: var(--app-border);
+  --color-border-strong: var(--app-border-strong);
+
+  --color-primary: var(--app-primary);
+  --color-primary-hover: var(--app-primary-hover);
+  --color-primary-strong: var(--app-primary-strong);
+  --color-primary-contrast: var(--app-primary-contrast);
+
+  --color-ring: var(--app-ring);
+
+  --shadow-primary-glow: var(--app-glow-primary);
+  --shadow-primary-glow-strong: var(--app-glow-primary-strong);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-hanken-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}

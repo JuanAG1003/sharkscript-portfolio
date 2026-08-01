@@ -1,0 +1,23 @@
+export {
+  GitHubIcon,
+  LinkedInIcon,
+  GitIcon,
+  ExpressjsIcon,
+  NextjsIcon,
+  VercelIcon,
+  ViteIcon,
+  CSSNewIcon,
+  ESLintIcon,
+  TypeScriptIcon,
+  JavaScriptIcon,
+  GmailIcon,
+  HTML5Icon,
+  NodejsIcon,
+  ReactIcon,
+  ReactQueryIcon,
+  ReactRouterIcon,
+  TailwindCSSIcon,
+  TanStackIcon,
+  PostmanIcon,
+  WhatsAppIcon
+} from './brand-icons'
