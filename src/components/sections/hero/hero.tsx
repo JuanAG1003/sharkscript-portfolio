@@ -47,13 +47,8 @@ export default function Hero () {
             </h1>
 
             <p className='mt-5 max-w-86 text-sm leading-6 text-muted sm:mt-6 sm:max-w-xl sm:text-base sm:leading-7 md:mx-auto lg:mx-0'>
-              <span className='sm:hidden'>
-                Desarrollador de software especializado en arquitecturas cyber-minimalistas y soluciones de alto rendimiento.
-              </span>
-              <span className='hidden sm:inline'>
-                Navegando por las profundidades del desarrollo web para construir
-                interfaces modernas, eficientes y seguras. Con <span className='text-primary'>SharkScript</span>, convierto ideas, aprendizajes y necesidades reales en productos digitales.
-              </span>
+              Navegando por las profundidades del desarrollo web para construir
+              interfaces modernas, eficientes y seguras. Con <span className='text-primary'>SharkScript</span>, convierto ideas, aprendizajes y necesidades reales en productos digitales.
             </p>
 
             <div className='mt-7 sm:mt-8 md:flex md:justify-center lg:block'>

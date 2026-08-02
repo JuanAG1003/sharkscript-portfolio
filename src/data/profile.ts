@@ -5,8 +5,6 @@ export const profile = {
   role: 'Desarrollador Web',
   location: 'México',
   email: 'juanssj24@gmail.com',
-  summary:
-    'Desarrollador web enfocado en construir interfaces modernas, accesibles y bien estructuradas con React, Next.js y TypeScript.',
   heroPhrase:
     'Desarrollador Web',
   availability:
