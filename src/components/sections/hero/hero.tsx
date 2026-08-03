@@ -9,7 +9,7 @@ export default function Hero () {
   return (
     <section
       aria-labelledby='hero-title'
-      className='relative overflow-clip pt-21 pb-18 sm:pt-38 sm:pb-28 md:pt-34 md:pb-30 lg:pt-42 lg:pb-38'
+      className='trace-gated-hero relative overflow-clip pt-21 pb-18 sm:pt-38 sm:pb-28 md:pt-34 md:pb-30 lg:pt-42 lg:pb-38'
       id='hero'
     >
       <div

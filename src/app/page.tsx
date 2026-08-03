@@ -8,6 +8,7 @@ import Image from 'next/image'
 import OceanBackground from '@/components/ui/ocean-background'
 import Projects from '@/components/sections/projects'
 import sharkscriptIsotipo from '@/assets/sharkscript-isotipo.webp'
+import SharkTraceMark from '@/components/ui/shark-trace-mark'
 import Skills from '@/components/sections/skills'
 import TechnicalPractices from '@/components/sections/projects/technical-practices'
 
@@ -24,10 +25,11 @@ export default function HomePage () {
       <Image
         alt=''
         aria-hidden='true'
-        className='pointer-events-none fixed left-1/2 top-42 z-10 w-86 max-w-none -translate-x-1/2 opacity-[0.07] mix-blend-screen blur-[0.2px] sm:top-48 sm:w-110 lg:top-88 lg:w-120 lg:translate-x-[-54%] lg:-translate-y-1/2 lg:opacity-[0.055] xl:w-136'
+        className='pointer-events-none fixed left-1/2 top-42 z-10 w-86 max-w-none mix-blend-screen blur-[0.2px] [--mark-opacity:0.07] [--mark-x:-50%] [--mark-y:0rem] animate-neon-trace-watermark sm:top-48 sm:w-110 lg:top-88 lg:w-120 lg:[--mark-opacity:0.055] lg:[--mark-x:-54%] lg:[--mark-y:-50%] xl:w-136'
         priority
         src={sharkscriptIsotipo}
       />
+      <SharkTraceMark />
       <div className='relative z-20'>
         <Header />
         <main id='main-content'>

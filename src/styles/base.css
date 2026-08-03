@@ -106,6 +106,7 @@
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
       animation-iteration-count: 1 !important;
       scroll-behavior: auto !important;
       transition-duration: 0.01ms !important;
@@ -140,6 +141,60 @@
   50% {
     transform: translateY(-0.42rem) scale(1.015);
     box-shadow: 0 0 0 5px rgb(47 217 244 / 0.1), 0 0 32px rgb(47 217 244 / 0.3);
+  }
+}
+
+@keyframes neon-trace-mark {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0 color-mix(in srgb, currentColor 0%, transparent));
+    transform: translate3d(var(--trace-x), var(--trace-y), 0) scale(1.03);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  72% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.9rem color-mix(in srgb, currentColor 70%, transparent)) drop-shadow(0 0 2.4rem color-mix(in srgb, currentColor 24%, transparent));
+    transform: translate3d(var(--trace-x), var(--trace-y), 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0.35rem color-mix(in srgb, currentColor 20%, transparent));
+    transform: translate3d(var(--trace-x), var(--trace-y), 0) scale(0.995);
+  }
+}
+
+@keyframes neon-trace-draw {
+  0% {
+    stroke-dashoffset: 1;
+    stroke-width: 5.5;
+  }
+
+  64% {
+    stroke-dashoffset: 0;
+    stroke-width: 5.5;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 3.5;
+  }
+}
+
+@keyframes neon-trace-watermark {
+  0%,
+  70% {
+    opacity: 0;
+    transform: translate3d(var(--mark-x), var(--mark-y), 0) scale(1.01);
+  }
+
+  100% {
+    opacity: var(--mark-opacity);
+    transform: translate3d(var(--mark-x), var(--mark-y), 0) scale(1);
   }
 }
 
@@ -222,6 +277,54 @@
 @layer utilities {
   .animate-hero-avatar-bounce {
     animation: hero-avatar-bounce 2.8s ease-in-out 900ms infinite;
+  }
+
+  .animate-neon-trace-mark {
+    animation: neon-trace-mark 2.7s ease-out both;
+    transform-origin: 50% 50%;
+    will-change: opacity, filter, transform;
+  }
+
+  .animate-neon-trace-mark .neon-trace-glow {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: neon-trace-draw 2.25s cubic-bezier(0.16, 1, 0.3, 1) 260ms both;
+    stroke-width: 5.5;
+  }
+
+  .animate-neon-trace-watermark {
+    animation: neon-trace-watermark 2.85s ease-out both;
+    will-change: opacity, transform;
+  }
+
+  .trace-gated-hero :where(.animate-blurred-fade-in, .animate-fade-in-up) {
+    animation-delay: 2.1s;
+  }
+
+  .trace-gated-hero :where(.animate-delay-100) {
+    animation-delay: 2.22s;
+  }
+
+  .trace-gated-hero :where(.animate-delay-200) {
+    animation-delay: 2.34s;
+  }
+
+  body:has(:target) .animate-neon-trace-mark {
+    display: none;
+  }
+
+  body:has(:target) .animate-neon-trace-watermark {
+    animation: none;
+    opacity: var(--mark-opacity);
+    transform: translate3d(var(--mark-x), var(--mark-y), 0) scale(1);
+  }
+
+  body:has(:target) header :where(.animate-fade-in-down, .animate-fade-in-up) {
+    animation: none;
+  }
+
+  body:has(:target) .trace-gated-hero :where(.animate-blurred-fade-in, .animate-fade-in-up, .animate-delay-100, .animate-delay-200) {
+    animation-delay: 0ms;
   }
 
   .animate-ocean-drift {
