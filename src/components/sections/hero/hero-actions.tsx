@@ -1,20 +1,21 @@
-import { ArrowDown, Send } from 'lucide-react'
+import { Download, Send } from 'lucide-react'
 import Button from '@/components/ui/button'
 
 export default function HeroActions () {
   return (
     <div className='flex flex-col gap-3 animate-fade-in-up animate-delay-100 animate-duration-700 sm:flex-row'>
-      <Button href='#projects'>
-        Explorar proyectos
-        <ArrowDown aria-hidden='true' size={18} />
+      <Button href='#contact'>
+        Contactarme
+        <Send aria-hidden='true' size={18} />
       </Button>
 
       <Button
-        href='#contact'
+        download
+        href='/juan-ariel-alarcon-garcia-desarrollador-web-jr.pdf'
         variant='secondary'
       >
-        Contactarme
-        <Send aria-hidden='true' size={18} />
+        Descargar CV
+        <Download aria-hidden='true' size={18} />
       </Button>
     </div>
   )
